@@ -1,0 +1,19 @@
+<div class="container">
+  <h2 align="center">List of tweeter users</h2><hr>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>follow</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |u| %>
+        <tr>
+          <td scope="row"><%= u.email%></td>
+          <td><%= link_to "follow", follow_path(u), remote: true%></td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+</div>

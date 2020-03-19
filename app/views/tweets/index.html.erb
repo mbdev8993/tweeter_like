@@ -1,0 +1,21 @@
+<div class="container">
+  <h2 align="center">All tweets</h2><hr>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Author</th>
+        <th>tweet</th>
+        <th>profile</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tweets.try(:each) do |t| %>
+        <tr>
+          <td scope="row"><%= t.user.email%></td>
+          <td><%= t.tweet %></td>
+          <td><%= link_to "profile", profile_path(t)%></td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,22 @@
+development:
+  adapter: mysql2
+  database: twitter_development
+  host: localhost
+  username: root
+  password: password
+  socket: /var/run/mysqld/mysqld.sock
+
+test: &TEST
+  adapter: mysql2
+  database: twitter_test
+  host: localhost
+  username: root
+  password: password
+  socket: /var/run/mysqld/mysqld.sock
+
+production:
+  adapter: mysql2
+  database: twitter_production
+  host: localhost
+  username: root
+  password:
